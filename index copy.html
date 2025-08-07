@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h6>Chinese Actress</h6>
+                <h1>Hi, I'm Zhao Lusii remote</h1>
+            </div>
+        </div>
+    </div>
+
+ <!-- ---------------------------------about---------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="title">About Me</h1>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam iste porro incidunt dolor nesciunt enim praesentium ipsam, sint illo aspernatur quasi amet aliquam rem quam qui officia quas reprehenderit.</p>
+                <div class="tab-actress">
+                    <p class="tab-links active-link" onclick="opentab('carrier')">Carrier</p>
+                    <p class="tab-links" onclick="opentab('award')">Award</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="carrier">
+                    <ul>
+                        <li><span>First Drama</span><br>Untouchable Lovers</li>
+                        <li><span>First Film</span><br>1921</li>
+                        <li><span>First Web Drama</span><br>Cinderella Chef </li>
+                        </ul>
+                </div>
+                <div class="tab-contents" id="award">
+                    <ul>
+                        <li><span>Golden Angel TV Award</span><br>Best Young Actor<h6>Love Like the Galaxy</h6></li>
+                        <li><span>Wenrong TV Award</span><br>Best Actress<br><h6>The Romance between Tiger and Rose</h6></li>
+                        <li><span>Jury Award</span><br>Popular TV Actor of the Year<br><h6>The Last Immortal</h6></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>High school</span><br>MingDao University</li>
+                        <li><span>Middle High School</span><br> High School Affiliated to Southwest Jiaotong</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!----------------------------service----------------------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Service</h1>
+            <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perspiciatis totam molestiae quaerat repudiandae. Recusandae neque, dolor reiciendis qui officia nostrum, nesciunt repellendus architecto quis necessitatibus sed vero dignissimos tenetur!</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perspiciatis totam molestiae quaerat repudiandae. Recusandae neque, dolor reiciendis qui officia nostrum, nesciunt repellendus architecto quis necessitatibus sed vero dignissimos tenetur!</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perspiciatis totam molestiae quaerat repudiandae. Recusandae neque, dolor reiciendis qui officia nostrum, nesciunt repellendus architecto quis necessitatibus sed vero dignissimos tenetur!</p>
+                <a href="#">Learn more</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+<!-----------------------------Portfolio--------------------------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.jpg">
+                <div class="layer">
+                    <h3>Sang Zhi</h3>
+                    <p>Hidden Love</p>
+                </div>
+            </div>
+             <div class="work">
+                <img src="work2.jpg">
+                <div class="layer">
+                    <h3>Li Leyan</h3>
+                    <p>The Long Ballad</p>
+                    </div>
+            </div>
+             <div class="work">
+                <img src="work3.jpg">
+                <div class="layer">
+                    <h3>Gu An Xin</h3>
+                    <p>Please Feel at Ease Mr. Ling</p>
+                    </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!---------------------------css for small screens------------------------------->
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+</body>
+</html>
